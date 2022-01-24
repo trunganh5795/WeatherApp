@@ -1,0 +1,33 @@
+.hourly-card {
+    padding: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: $transition;
+    margin: 14px 0;
+    &__content {
+        
+        padding: 10px;
+        background-color: $color-secondary;
+        // box-shadow: $box-shadow-light;
+        border-radius: $card-border-radius;
+        // border: 2px solid $color-gray;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transition: color 0.5s ease 0s;
+        // 
+        p{
+            font-size: $fz-body;
+            font-weight: 500;
+        }
+        img{
+            width: 100px;
+            display:inline !important;
+            padding: 10px;
+        }
+    }
+    &:hover {
+        z-index: 99;
+        transform: scale(1.05);
+    }
+}

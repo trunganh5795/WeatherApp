@@ -1,0 +1,100 @@
+.main__status {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    // justify-content: space-around;
+    &__temperature {
+        font-size: 90px;
+        font-weight: 200;
+        line-height: 1;
+    }
+    &__time {
+        font-weight: 500;
+        font-size: $fz-body;
+        span {
+            color: $color-gray;
+        }
+        padding-bottom: 0.4rem;
+        border-bottom: 2px solid $light-color-border;
+    }
+    &__state {
+        .feature__state {
+            text-align: left;
+            padding-bottom: 10px;
+            img{
+                width: 30px;
+            }
+            span{
+                font-weight: 500;
+            }
+        }
+    }
+    &__city{
+        border-radius: 10px;
+        color:$color-light;
+        font-size:$fz-body;
+        margin: 30px 30px;
+        @include gradient-color(c,30deg);
+        // background: linear-gradient(30deg, #28ace1 12%, #51cce7 50%, #7aebec 91%);
+        p{
+            padding: 40px;
+            margin: 0;
+            font-weight: 500;
+        }
+    }
+}
+@media #{$layout-laptop} {
+    .main__status {
+        &__temperature {
+            font-size: 55px;
+            font-weight: 200;
+            // line-height: 1;
+            font-weight: 400;
+        }
+        &__city{
+            margin: 30px 15px;
+            p{
+                padding: 20px;
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+    }
+}
+@media #{$layout-notebook} {
+    .main__status {
+        &__temperature {
+            font-size: 55px;
+            font-weight: 200;
+            // line-height: 1;
+            font-weight: 400;
+        }
+        &__city{
+            margin: 30px 5px;
+            p{
+                padding: 20px;
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+    }
+}
+@media #{$layout-tablet} {
+    .main__status {
+        &__temperature {
+            font-size: 55px;
+            font-weight: 200;
+            // line-height: 1;
+            font-weight: 400;
+        }
+        &__city{
+            margin: 0 5px;
+            p{
+                padding: 20px;
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+    }
+}

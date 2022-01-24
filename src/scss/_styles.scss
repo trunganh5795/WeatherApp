@@ -1,0 +1,15 @@
+@import "./variables";
+@import "./mixins";
+
+
+//Basic:
+@import "./basic/reset";
+@import "./basic/typography";
+@import "./basic/utilities";
+//component style
+@import "./components/statuscard";
+@import "./components/searchbar";
+@import "./components/maininfo";
+@import "./components/mainstatus";
+@import "./components/hourlycard";
+@import "./basic/light"

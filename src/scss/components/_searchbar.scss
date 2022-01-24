@@ -1,0 +1,56 @@
+.weather__search__location {
+    input {
+        border: none;
+        box-shadow: none;
+        width: 60%;
+        font-weight: $input-button-height;
+        color: $color-body;
+        &:focus {
+            border: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+    }
+    &__btn-search {
+        svg {
+            color: $color-theme;
+            font-size: $fz-body;
+        }
+    }
+    button {
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
+    .wrapper {
+        background-color: white;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        svg {
+            .cls-1 {
+                fill: $color-theme;
+            }
+        }
+        .refresh-icon {
+            cursor: pointer;
+            transition: $transition;
+            &:hover {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
