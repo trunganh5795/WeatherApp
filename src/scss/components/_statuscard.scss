@@ -7,7 +7,7 @@ $pd-left: 30px;
     padding: 30px 70px 30px 30px;
     // display: flex;
     // align-items: center;
-
+    height: 200px;
     background-color: $color-secondary;
     box-shadow: $box-shadow-light;
     border-radius: $card-border-radius;
@@ -93,7 +93,6 @@ $pd-left: 30px;
     }
     &__growup_content {
         padding-bottom: 2px;
-        height: 100%;
         p {
             font-size: 1.8 * $fz-body;
             font-weight: 500;
@@ -172,4 +171,13 @@ $pd-left: 30px;
             }
         }
     }
+}
+@media #{$layout-mobile-xs}{
+    .status-card {
+        padding: 20px 20px 20px 20px;
+        &__uv__icon{
+            right: 20px;
+        }
+    }
+
 }

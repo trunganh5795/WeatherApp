@@ -6,9 +6,6 @@ export default function StatusCard(props) {
             <div className="status-card__title">
                 <span>{props.title}</span>
             </div>
-            {/* <IconContext.Provider value={{className:"icon"}}>
-                <WiHumidity />
-            </IconContext.Provider> */}
             {props.renderBody}
         </div>
     )

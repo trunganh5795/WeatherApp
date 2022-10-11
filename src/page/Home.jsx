@@ -74,9 +74,9 @@ export default function Home() {
     }, [dispatch])
     return (
         <div>
-            {console.log(data)}
+
             <div className="container-fluid">
-                <div className="row">
+                <div className="row" style={{minHeight:'100vh'}}>
                     <div className="col-12 col-md-4 col-lg-3">
                         <MainInfo city={data.location ? data.location?.country + ", " + data.location?.name : null} time={data.location?.localtime_epoch}
                             temp_c={data.current?.temp_c}
@@ -89,26 +89,26 @@ export default function Home() {
                             <h3>Hourly</h3>
                             <HourlyStatus hourly={data.forecast?.forecastday[0].hour} />
                             <h3>Today Highlights</h3>
-                            <div className="col-12 col-md-6 col-xl-4">
+                            <div className="col-12 col-md-6 col-xl-4 ">
                                 <StatusCard
                                     title={"Wind Status"}
                                     renderBody={windStatusBody(data.current?.wind_kph, data.current?.wind_dir)}
                                 //  wind_kph={data.current?.wind_kph}
                                 />
                             </div>
-                            <div className="col-12 col-md-6 col-xl-4">
+                            <div className="col-12 col-md-6 col-xl-4 ">
                                 <StatusCard title={"Humidity"} renderBody={statusBodyStyle_1(data.current?.humidity, "%", weatherStatusCheck({ key: "humidity", payload: data.current?.humidity }), WiHumidity, emotion, null)} />
                             </div>
-                            <div className="col-12 col-md-6 col-xl-4">
+                            <div className="col-12 col-md-6 col-xl-4 ">
                                 <StatusCard title={"Air Quality"} renderBody={statusBodyStyle_1(parseInt(data.current?.air_quality.pm2_5), null, weatherStatusCheck({ key: "airQuality", payload: data.current?.air_quality.pm2_5 }), RiSurgicalMaskFill, emotion, null)} />
                             </div>
-                            <div className="col-12 col-md-6 col-xl-4">
+                            <div className="col-12 col-md-6 col-xl-4 ">
                                 <StatusCard title={"Visibility"} renderBody={statusBodyStyle_1(data.current?.vis_km, "km", weatherStatusCheck({ key: "visibility", payload: data.current?.vis_km }), null, emotion, null)} />
                             </div>
-                            <div className="col-12 col-md-6 col-xl-4">
+                            <div className="col-12 col-md-6 col-xl-4 ">
                                 <StatusCard title={"Sunrise & Sunset"} renderBody={sunriseBody(data.forecast?.forecastday[0].astro.sunrise, data.forecast?.forecastday[0].astro.sunset)} />
                             </div>
-                            <div className="col-12 col-md-6 col-xl-4">
+                            <div className="col-12 col-md-6 col-xl-4 ">
                                 <StatusCard title={"UV Index"} renderBody={statusBodyStyle_1(data.current?.uv, "", weatherStatusCheck({ key: "UV", payload: data.current?.uv}), null, emotion, uvIcon)} />
                             </div>
                         </div>
